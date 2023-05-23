@@ -1,5 +1,10 @@
 
+
+
 <h1>{{ name }}</h1>
+<input id="boxHeroName" [(ngModel)]="InputHeroValue">
+<button (click)="changeHeroByThis(InputHeroValue)">Cambio de Héroe</button>
+
 
 <dl>
   <td>Nombre:</td>
@@ -25,14 +30,31 @@
 </button>
 
 <button
-  *ngIf="age !== 25"
+  *ngIf="InputAgeValue !== null; else elseBlock"
   (click)="changeAge()"
   class="btn btn-primary">
   Cambiar edad
 </button>
+
+<ng-template #elseBlock>
+  <button
+    (click)="changeAgeByThis(InputAgeValue)"
+    class="btn btn-primary">
+    Cambiar edad InputAgeValue
+  </button>
+</ng-template>
 
 <button
   (click)="resetForm()"
   class="btn btn-primary mx-2">
   Reset
 </button>
+
+<button
+
+(click)="changeAgeByThis(InputAgeValue)"
+>
+
+  Introduce edad
+</button>
+<input id="iAge" [(ngModel)] = "InputAgeValue">

@@ -15,6 +15,13 @@
   Borrar último héroe
 </button>
 
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeFirtsHero()"
+  class="btn btn-outline-danger">
+  Borrar primer héroe
+</button>
+
 
 
 

@@ -9,12 +9,12 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CounterModule,
-    HeroesModule,
+    HeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
